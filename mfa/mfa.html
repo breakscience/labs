@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <title>MFA</title>
+</head>
+<body>
+    <h1>Multi-Factor Authentication</h1>
+    <img src="data:image/png;base64,{{ qr_code }}"><br>
+    <form method="post">
+        Token: <input type="text" name="token"><br>
+        <input type="submit" value="Verify">
+    </form>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+</body>
+</html>
