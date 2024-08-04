@@ -177,4 +177,7 @@ Build and run your container using Docker Compose:
 
     docker-compose up --build
 
-Now, navigate to http://localhost:5000 in your web browser. You should be able to log in and go through the MFA process.
+Now, navigate to http://localhost:5000/login in your web browser. You should be able to log in as 'user1' with the pass 'password123' and go through the MFA process.
+
+***NOTE***
+After MacOS Monterey, port 5000 is being used as an Airplay receiving port. You will need to either disable in System Preferences or changes the ports in the code. 
